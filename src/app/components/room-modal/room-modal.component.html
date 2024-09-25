@@ -1,0 +1,30 @@
+<div class="backdrop"></div>
+<form [formGroup]="roomForm" (submit)="saveRoom()">
+    <div class="container">
+        <div class="info-container">
+            <label>Name</label>
+            <input type="text" formControlName="name">
+            <h5 class="error" [ngStyle]="{'visibility': roomForm.controls['name'].errors ? 'visible' : 'hidden'}">Introduzca un nombre para la sala</h5>
+        </div>
+        <div class="info-container">
+            <label>Capacidad máxima</label>
+            <input type="number" formControlName="capacity">
+            <h5 class="error" [ngStyle]="{'visibility': roomForm.controls['capacity'].errors ? 'visible' : 'hidden'}">La capacidad debe ser superior a 0</h5>
+        </div>
+        <div class="info-container">
+            <label>Ocupación</label>
+            <input type="number" formControlName="occupation">
+            <span class="percentaje">%</span>
+            <h5 class="error" [ngStyle]="{'visibility': roomForm.controls['occupation'].errors ? 'visible' : 'hidden'}">La ocupación debe tener un valor de entre 0 y 100</h5>
+        </div>
+        <div class="button-container">
+            <button class="button cancel" (click)="hideModal()">Cancelar</button>
+            @if (id) {
+                <button type="submit" class="button" [disabled]="!roomForm.valid">Guardar</button>
+            }
+            @else {
+                <button type="submit" class="button" [disabled]="!roomForm.valid">Crear</button>
+            }
+        </div>
+    </div>
+</form>

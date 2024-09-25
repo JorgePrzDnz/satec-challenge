@@ -1,0 +1,12 @@
+<div class="backdrop"></div>
+<div class="container">
+    <div class="info-container">
+        <h2>¿Está seguro que desea eliminar la sala?</h2>
+        <div class="button-container">
+            <button class="button cancel" (click)="hideModal()">Cancelar</button>
+            @if (id) {
+                <button type="submit" class="button" (click)="deleteRoom()">Eliminar</button>
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="header">
+        <h3>{{ name }}</h3>
+        <button class="add-button" (click)="createRoom()">Añadir sala</button>
+    </div>
+    <div class="filters">
+        <h4>Filtros</h4>
+        <form class="filters-form" [formGroup]="filterForm">
+            <div class="filter">
+                <label>Capacidad</label>
+                <input type="number" formControlName="capacity">
+            </div>
+            <div class="filter">
+                <label>Ocupación</label>
+                <input type="number" formControlName="occupation">
+            </div>
+        </form>
+    </div>
+    <div class="rooms-container">
+        @for (room of rooms; track $index) {
+            <app-room
+                [id]="room.id"
+                [name]="room.name"
+                [occupation]="room.occupation"
+                [capacity]="room.capacity"
+                (displayRoomModal)="modifyRoom($event)"
+                (displayDeleteModal)="deleteRoom($event)">
+            </app-room>
+        }
+    </div>
+</div>
+

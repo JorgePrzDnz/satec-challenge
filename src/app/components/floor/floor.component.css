@@ -1,0 +1,47 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 26px;
+  border: 1px solid #2e344d;
+  padding: 25px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.filters-form {
+  display: flex;
+  gap: 20px;
+}
+
+.filter {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter > label {
+  font-weight: bold;
+}
+
+.filter > input {
+  border: 1px solid #2e342e;
+  border-radius: 12px;
+  height: 15px;
+  padding: 5px 5px 5px 15px;
+  margin-bottom: 15px;
+  margin-top: 5px;
+}
+
+.rooms-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1rem;
+  margin-top: 15px;
+}
+
+.add-button {
+  padding: 15px 25px;
+}

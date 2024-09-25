@@ -1,0 +1,33 @@
+<div class="container">
+    <h2>Salas</h2>
+    <select class="floor-selector" name="floor" [(ngModel)]="selectedFloorId" (change)="loadFloor()">
+        @for (floor of floors; track $index) {
+            <option [value]="floor.id">{{floor.name}}</option>
+        }
+    </select>    
+    <app-floor
+        [name]="selectedFloorName"
+        [rooms]="selectedRooms"
+        (filterRooms)="filterRooms($event)"
+        (displayRoomModal)="showRoomModal($event)"
+        (displayDeleteModal)="showDeleteModal($event)">
+    </app-floor>
+    @if(displayRoomModal) {
+        <app-room-modal
+            [id]="roomToModify?.id"
+            [name]="roomToModify?.name" 
+            [capacity]="roomToModify?.capacity"
+            [occupation]="roomToModify?.occupation"
+            (onModifyRoon)="modifyRoom($event)"
+            (onCreateRoon)="createRoom($event)"
+            (onHideModal)="displayRoomModal = false">
+        </app-room-modal>
+    }
+    @if(displayDeleteModal) {
+        <app-delete-room-modal
+            [id]="roomToDelete?.id"
+            (onDeleteRoom)="deleteRoom($event)"
+            (onHideModal)="displayDeleteModal = false">
+        </app-delete-room-modal>
+    }
+</div>

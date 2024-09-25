@@ -1,0 +1,16 @@
+<div class="container">
+    <h4>{{name}}</h4>
+    <div class="info-container">
+        <label>Capacidad máxima</label>
+        <input type="number" value="{{capacity}}" readonly>
+    </div>
+    <div class="info-container">
+        <label>Ocupación</label>
+        <input type="number" value="{{occupation}}" readonly>
+        <span class="percentaje">%</span>
+    </div>
+    <div class="button-container">
+        <button class="delete" (click)="deleteRoom(id)">Eliminar</button>
+        <button class="modify" (click)="modifyRoom(id)">Modificar</button>
+    </div>
+</div>

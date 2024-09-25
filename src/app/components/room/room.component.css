@@ -1,0 +1,46 @@
+.container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    background-color: #f5f7fb;
+    border-radius: 26px;
+    padding: 25px;
+}
+
+.info-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-container > input {
+    border: 1px solid #2e342e;
+    border-radius: 12px;
+    height: 30px;
+    padding: 5px 5px 5px 15px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+
+.info-container > label {
+    font-weight: bold;
+}
+
+.percentaje {
+    position: absolute;
+    top: 45%;
+    right: 5%;
+}
+
+.modify {
+    width: 40%;
+}
+
+.delete {
+    width: 40%;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+}

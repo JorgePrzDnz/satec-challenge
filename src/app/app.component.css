@@ -1,0 +1,12 @@
+.container {
+    padding: 0 20px;
+}
+
+.floor-selector {
+    border: 1px solid #2e342e;
+    border-radius: 12px;
+    height: 40px;
+    padding: 5px 5px 5px 15px;
+    margin-bottom: 15px;
+    width: 175px;
+}
