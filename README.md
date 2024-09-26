@@ -1,27 +1,56 @@
 # SatecChallenge
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.3.
+## Descripción
 
-## Development server
+Este proyecto es una aplicación web desarrollada con Angular, diseñada como prueba de código para la empresa Satec. Su objetivo es realizar un control de las salas de las diversas plantas de un edificio.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Estructura del Proyecto
 
-## Code scaffolding
+    -   **src/**: Contiene el código fuente de la aplicación.
+    -   **app/**: Módulos y componentes principales de la aplicación.
+    -   **assets/**: Recursos estáticos como imágenes y archivos de estilo.
+    -   **environments/**: Configuraciones para diferentes entornos (desarrollo, producción).
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Requisitos Previos
 
-## Build
+-   [Node.js](https://nodejs.org/) (versión LTS recomendada)
+-   [Angular CLI](https://angular.io/cli) (versión más reciente)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Instalación
 
-## Running unit tests
+1. Clonar el repositorio:
+    ```bash
+    git clone https://github.com/JorgePrzDnz/satec-challenge
+    ```
+2. Navegar al directorio del proyecto:
+    ```bash
+    cd satec-challenge
+    ```
+3. Instalar las dependencias:
+    ```bash
+    npm install
+    ```
+4. Ejecución del proyecto:
+    ```bash
+    ng serve
+    ```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Ejecución del Proyecto
 
-## Running end-to-end tests
+Para ejecutar el proyecto en un servidor de desarrollo, utiliza el siguiente comando:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```bash
+ng serve
+```
 
-## Further help
+Luego, abre tu navegador y navega a http://localhost:4200/. La aplicación se recargará automáticamente si se realiza algún cambio en los archivos fuente.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Decisiones tomadas
+
+He decidido desarrollar el proyecto con Angular ya que es el framework con el que me siento más debido a tener una mayor experiencia trabajando con este con respecto a las demás alternativas.
+
+A la hora de trabajar con las distintas operaciones que se pueden hacer con las salas (crear, modificar y eliminar), he decidido usar modales ya que, en mi opinión, mejoran la experiencia del usuario generando un diseño más cómodo e intuitivo.
+
+## Dificultades encontradas
+
+A la hora de usar API Mocha, al tratar de trabajar con los Path Params y Query Params me han surgido varios contratiempos al tratar de pasar estos a través de los endpoints, es por ello, que el endpoint específico de la funcionalidad de eliminar una sala lo he dejado comentado.
